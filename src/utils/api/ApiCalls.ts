@@ -1,5 +1,10 @@
-import axios from "./Api"
+import axios from "./Api";
 
-export const fetchDictionary = async()=>{
-    await axios.get("/collections")
-}
+export const fetchDictionary = async () => {
+  return await axios
+    .get("/define")
+    .then((res) => res.data)
+    .catch((err) => {
+      return err;
+    });
+};
