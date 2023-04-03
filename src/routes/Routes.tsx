@@ -4,9 +4,9 @@ import { HomeLayout } from '../components'
 import { Home } from '../pages'
 import { ErrorBoundary } from '../utils'
 
-const Routes = () => {
 
-    const elememts = createBrowserRouter([
+
+  export  const elememts = createBrowserRouter([
         {
             path : "/",
             element : <HomeLayout />,
@@ -21,7 +21,4 @@ const Routes = () => {
         }
     ])
 
-  return elememts
-}
 
-export default Routes
