@@ -1,7 +1,9 @@
 import React, { lazy } from "react";
 
 import { createBrowserRouter } from "react-router-dom";
-import { Dashboard, HomeLayout, SideBar } from "../components";
+import { Dashboard, HomeLayout } from "../components";
+import  ErrorBoundary  from "../utils/hoc/ErrorBoundary";
+import NotFound from "../utils/hoc/NotFound";
 
 const Home = lazy(() => import("../pages/Home"));
 const About = lazy(() => import("../pages/About"));
@@ -17,14 +19,20 @@ export const Elements = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+        hasErrorBoundary: true,
+        errorElement: <ErrorBoundary />,
       },
       {
         path: "/contact",
         element: <ContactUs />,
+        hasErrorBoundary: true,
+        errorElement: <ErrorBoundary />,
       },
       {
         path: "/about",
         element: <About />,
+        hasErrorBoundary: true,
+        errorElement: <ErrorBoundary />,
       },
     ],
   },
@@ -35,11 +43,19 @@ export const Elements = createBrowserRouter([
       {
         index: true,
         element: <ParentComp />,
+        hasErrorBoundary: true,
+        errorElement: <ErrorBoundary />,
       },
       {
         path: "/dashboard/comp",
         element: <Comp />,
+        hasErrorBoundary: true,
+        errorElement: <ErrorBoundary />,
       },
     ],
   },
+  {
+    path : "*",
+    element : <NotFound />
+  }
 ]);
