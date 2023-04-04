@@ -1,30 +1,18 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-// import App from './App';
+import App from './App';
 import reportWebVitals from "./reportWebVitals";
-import { RouterProvider } from "react-router-dom";
-import { elememts } from "./routes/Routes";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import Loading from "./pages/Loading";
 
-const client = new QueryClient();
+
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Suspense fallback ={<Loading />}>
-    <QueryClientProvider client={client}>
-      <RouterProvider router={elememts} />
-      <ReactQueryDevtools />
-    </QueryClientProvider>
-    </Suspense>
-  
 
-    {/* <App /> */}
+    <App />
   </React.StrictMode>
 );
 
