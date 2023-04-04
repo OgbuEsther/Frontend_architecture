@@ -1,2 +1,3 @@
-export * from "./DasboardLayout"
-export * from "./home"
+export * from "./Home"
+
+export * from "./Dashboard"

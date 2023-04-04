@@ -3,11 +3,6 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from './App';
 import reportWebVitals from "./reportWebVitals";
-import Loading from "./components/Loading";
-import { RouterProvider } from "react-router-dom";
-import { Elements } from "./routes/AllRoutes";
-
-
 
 
 const root = ReactDOM.createRoot(
@@ -15,11 +10,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-<Suspense fallback={<Loading />}>
-<RouterProvider router={Elements} />
 
-</Suspense>
-    {/* <App /> */}
+    <App />
   </React.StrictMode>
 );
 

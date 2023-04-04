@@ -1,5 +1,5 @@
 import React from 'react'
-import { Footer, Header } from '../../blocks'
+import { Footer, Header } from '../../block'
 import {Outlet} from "react-router-dom"
 const HomeLayout = () => {
   return (
