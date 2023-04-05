@@ -12,7 +12,7 @@ const Staffsidebar = () => {
 
         <Home>
            
-              <NavLink to="/staffdashboard" style={({isActive}) => {
+              <NavLink to="/dashboard/comp" style={({isActive}) => {
                 return {
                     textDecoration: isActive ? "none" : "none",
                     color: isActive ? "#2AA7FF" : "#3e4956",
@@ -28,7 +28,7 @@ const Staffsidebar = () => {
           </Home2>
           {show ? (
               <Staffs>
-                  <NavLink to="/schoolfees" style={({isActive}) => {
+                  <NavLink to="/dashboard" style={({isActive}) => {
                 return {
                     textDecoration: isActive ? "none" : "none",
                     color: isActive ? "#2AA7FF" : "#3e4956",
@@ -36,7 +36,7 @@ const Staffsidebar = () => {
             }}>
                       <p>School Fees</p>
                     </NavLink>
-                  <NavLink to="/travel" style={({isActive}) => {
+                  <NavLink to="/dashboard" style={({isActive}) => {
                 return {
                     textDecoration: isActive ? "none" : "none",
                     color: isActive ? "#2AA7FF" : "#3e4956",
@@ -44,7 +44,7 @@ const Staffsidebar = () => {
             }}>
                       <p>Travel & Tour</p>
                   </NavLink>
-                  <NavLink to="/Rent" style={({isActive}) => {
+                  <NavLink to="/dashboard" style={({isActive}) => {
                 return {
                     textDecoration: isActive ? "none" : "none",
                     color: isActive ? "#2AA7FF" : "#3e4956",
@@ -62,7 +62,7 @@ const Staffsidebar = () => {
           
         <Home2>
             {/* <Icon2><IoMdPerson /></Icon2> */}
-              <NavLink to="/transaction" style={({isActive}) => {
+              <NavLink to="/dashboard" style={({isActive}) => {
                 return {
                     textDecoration: isActive ? "none" : "none",
                     color: isActive ? "#2AA7FF" : "#3e4956",
